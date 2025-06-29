@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Blog</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      font-weight: bold; /* Menambahkan font tebal */
+      margin: 0;
+      padding: 0;
+      background-color: rgb(128, 128, 128); /* Warna abu-abu */
+      color: #f9f9f9;
+      min-height: 100vh;
+    }
+
+    /* Overlay transparan */
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.5); /* Hitam dengan transparansi 50% */
+      z-index: 1; /* Menempatkan overlay di atas gambar latar belakang */
+    }
+
+    header, footer {
+      background: rgba(0, 0, 0, 0.75);
+      color: #fff;
+      text-align: center;
+      padding: 1rem;
+      position: relative; /* Agar header dan footer tetap di atas overlay */
+      z-index: 2; /* Menempatkan header dan footer di atas overlay */
+    }
+
+    nav a {
+      color: #fff;
+      margin: 0 10px;
+      text-decoration: none;
+      font-weight: bold; /* Menambahkan font tebal pada tautan */
+    }
+
+    nav a:hover {
+      color: #ffd700;
+      text-decoration: underline;
+      transition: 0.3s;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: auto;
+      padding: 2rem;
+      position: relative; /* Agar konten tetap di atas overlay */
+      z-index: 2; /* Menempatkan konten di atas overlay */
+    }
+
+    .profile-img {
+      display: block;
+      margin: 0 auto 2rem auto;
+      width: 140px;
+      border-radius: 50%;
+      border: 4px solid transparent; /* Menggunakan border transparan untuk efek */
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+      transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
+    }
+
+    .profile-img:hover {
+      transform: scale(1.1); /* Sedikit memperbesar gambar saat di-hover */
+      box-shadow: 0 0 25px rgba(255, 255, 255, 0.8), 0 0 15px rgba(255, 215, 0, 0.6); /* Menambahkan efek glow */
+      border-color: #ffd700; /* Mengubah warna bingkai saat di-hover */
+    }
+
+    article {
+      background-color: rgba(0, 0, 0, 0.8); /* Mengubah latar belakang artikel menjadi hitam pekat dengan transparansi */
+      padding: 1rem;
+      border-radius: 8px;
+      margin-bottom: 2rem; /* Menambahkan margin bawah untuk jarak antar artikel */
+      transition: transform 0.3s ease, box-shadow 0.3s ease; /* Menambahkan transisi */
+      animation: fadeIn 0.5s ease; /* Menambahkan animasi fade-in saat artikel muncul */
+    }
+
+    article:hover {
+      transform: scale(1.02); /* Sedikit memperbesar artikel saat di-hover */
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Menambahkan bayangan saat di-hover */
+    }
+
+    article h2 {
+      color: #ffffdd;
+    }
+
+    article p {
+      color: #f0f0f0;
+      line-height: 1.6;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="overlay"></div> <!-- Overlay transparan -->
+  
+  <header>
+    <h1>Bloger</h1>
+    <nav>
+      <a href="index.html">Profil</a>
+      <a href="about.html">Tentang Saya</a>
+      <a href="blog.html">Bloger</a>
+	  <a href="toko.html">Toko</a> <!-- Tautan Toko ditambahkan di sini -->
+	  <a href="foto.html">Foto</a> <!-- Tautan Foto ditambahkan di sini -->
+      <a href="portfolio.html">Portfolio</a>
+      <a href="contact.html">Kontak</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <img src="blogerku.jpg" alt="Foto Profil" class="profile-img">
+
+    <article>
+      <h2>Bloger Saya</h2>
+      <p>Ini adalah blog post pertama saya. Saya menulis tentang perjalanan saya memulai karier di dunia pemrograman.</p>
+    </article>
+
+    <!-- Artikel "Bloger Kedua" telah dihapus -->
+  </div>
+
+  <footer>© 2025 Nias, Indonesia</footer>
+</body>
+</html>

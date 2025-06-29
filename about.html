@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>About</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      font-weight: bold; /* Menambahkan font tebal */
+      margin: 0;
+      padding: 0;
+      background-color: rgb(128, 128, 128); /* Warna abu-abu */
+      color: #333;
+      min-height: 100vh;
+    }
+
+    /* Overlay transparan */
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.5); /* Hitam dengan transparansi 50% */
+      z-index: 1; /* Menempatkan overlay di atas gambar latar belakang */
+    }
+
+    header, footer {
+      background: rgba(0, 0, 0, 0.75);
+      color: #fff;
+      text-align: center;
+      padding: 1rem;
+      position: relative; /* Agar header dan footer tetap di atas overlay */
+      z-index: 2; /* Menempatkan header dan footer di atas overlay */
+    }
+
+    nav a {
+      color: #fff;
+      margin: 0 10px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #ffd700;
+      text-decoration: underline;
+      transition: 0.3s;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: auto;
+      padding: 2rem;
+      position: relative; /* Agar konten tetap di atas overlay */
+      z-index: 2; /* Menempatkan konten di atas overlay */
+      text-align: left; /* Mengubah teks menjadi rata kiri */
+      display: flex; /* Menggunakan flexbox untuk tata letak */
+      align-items: center; /* Menyelaraskan item di tengah secara vertikal */
+    }
+
+    .profile-img {
+      width: 140px;
+      border-radius: 50%; /* Membuat gambar menjadi bulat */
+      border: 4px solid transparent; /* Menggunakan border transparan untuk efek */
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+      margin-right: 20px; /* Mengatur margin kanan agar ada jarak dengan teks */
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      /* animation: rgbBlink 1.5s infinite; */ /* Menghapus animasi kelap-kelip RGB */
+    }
+
+    /* @keyframes rgbBlink { */ /* Menghapus keyframes untuk animasi kelap-kelip */
+    /*   0% { */
+    /*     border-color: red; */
+    /*   } */
+    /*   33% { */
+    /*     border-color: green; */
+    /*   } */
+    /*   66% { */
+    /*     border-color: blue; */
+    /*   } */
+    /*   100% { */
+    /*     border-color: red; */
+    /*   } */
+    /* } */
+
+    .profile-img:hover {
+      transform: scale(1.1); /* Sedikit memperbesar gambar saat di-hover */
+      box-shadow: 0 0 25px rgba(255, 255, 255, 0.8), 0 0 15px rgba(255, 215, 0, 0.6); /* Menambahkan efek glow */
+    }
+
+    .project {
+      background: rgba(0, 0, 0, 0.8); /* Mengubah warna latar belakang menjadi hitam */
+      padding: 1rem;
+      margin-bottom: 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease; /* Menambahkan transisi */
+      animation: fadeIn 0.5s ease; /* Menambahkan animasi fade-in saat proyek muncul */
+    }
+
+    .project:hover {
+      transform: scale(1.05); /* Sedikit memperbesar proyek saat di-hover */
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Menambahkan bayangan saat di-hover */
+    }
+
+    .project h2 {
+      margin-top: 0;
+      color: #fff; /* Mengubah warna teks menjadi putih */
+    }
+
+    .project p {
+      color: #fff; /* Mengubah warna teks menjadi putih */
+    }
+
+    .project img {
+      max-width: 100%; /* Membuat gambar responsif */
+      border-radius: 8px; /* Menambahkan sudut melengkung pada gambar */
+      margin-top: 10px; /* Menambahkan jarak di atas gambar */
+    }
+
+    /* Animasi untuk judul */
+    @keyframes titleAnimation {
+      0% {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    h1 {
+      animation: titleAnimation 1s ease forwards; /* Menerapkan animasi pada judul */
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="overlay"></div> <!-- Overlay transparan -->
+  
+  <header>
+    <h1>Tentang Saya</h1>
+    <nav>
+      <a href="index.html">Profil</a>
+      <a href="about.html">Tentang Saya</a>
+      <a href="blog.html">Bloger</a>
+	  <a href="toko.html">Toko</a> <!-- Tautan Toko ditambahkan di sini -->
+	  <a href="foto.html">Foto</a> <!-- Tautan Foto ditambahkan di sini -->
+      <a href="portfolio.html">Portfolio</a>
+      <a href="contact.html">Kontak</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <img src="portfolioku.jpg" alt="Foto Profil" class="profile-img">
+
+    <div>
+      <div class="project">
+        <h2>PROJECT 1</h2>
+        <img src="project.jpg" alt="Gambar Proyek 1"> <!-- Gambar proyek ditambahkan di sini -->
+      </div>
+    </div>
+  </div>
+
+  <footer>© 2025 Nias, Indonesia</footer>
+</body>
+</html>

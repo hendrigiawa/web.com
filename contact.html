@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Kontak</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      font-weight: bold; /* Menambahkan font tebal */
+      margin: 0;
+      padding: 0;
+      background: url('background-building.jpg') no-repeat center center fixed; /* Ganti dengan URL gambar gedung */
+      background-size: cover; /* Mengatur gambar agar menutupi seluruh latar belakang */
+      color: #333;
+      min-height: 100vh;
+    }
+
+    header {
+      position: relative; /* Mengatur posisi relatif untuk header */
+      background: rgba(0, 0, 0, 0.8);
+      color: #fff;
+      text-align: center;
+      padding: 1rem;
+    }
+
+    .profile-pic {
+      position: absolute; /* Mengatur posisi absolut untuk foto profil */
+      top: 10px; /* Jarak dari atas */
+      right: 10px; /* Jarak dari kanan */
+      width: 100px; /* Lebar foto profil yang lebih besar */
+      height: 100px; /* Tinggi foto profil yang lebih besar */
+      border-radius: 50%; /* Membuat foto profil berbentuk bulat */
+      overflow: hidden; /* Menghindari overflow */
+      border: 2px solid #fff; /* Border putih di sekitar foto */
+    }
+
+    .profile-pic img {
+      width: 100%; /* Mengatur lebar gambar agar sesuai dengan kontainer */
+      height: auto; /* Menjaga rasio aspek gambar */
+    }
+
+    nav a {
+      color: #fff;
+      margin: 0 10px;
+      text-decoration: none;
+      font-weight: bold; /* Menambahkan font tebal pada tautan */
+    }
+
+    nav a:hover {
+      color: #ffd700;
+      text-decoration: underline;
+      transition: 0.3s;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: auto;
+      padding: 2rem;
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 10px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      margin-top: 40px;
+      animation: fadeIn 0.5s ease; /* Menambahkan animasi fade-in saat kontainer muncul */
+    }
+
+    form input, form textarea {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1rem;
+      transition: transform 0.3s ease, box-shadow 0.3s ease; /* Menambahkan transisi */
+      font-weight: bold; /* Menambahkan font tebal pada input dan textarea */
+    }
+
+    form input:hover, form textarea:hover {
+      transform: scale(1.02); /* Sedikit memperbesar saat di-hover */
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Menambahkan bayangan saat di-hover */
+    }
+
+    button {
+      background-color: #333;
+      color: #fff;
+      border: none;
+      padding: 12px 25px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold; /* Menambahkan font tebal pada tombol */
+      font-size: 1rem;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #555;
+    }
+
+    footer {
+      text-align: center; /* Memusatkan teks di footer */
+      padding: 1rem;
+      background: rgba(0, 0, 0, 0.8); /* Menambahkan latar belakang untuk footer */
+      color: #fff; /* Mengatur warna teks footer */
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Kontak</h1>
+    <div class="profile-pic">
+      <img src="image.jpg" alt="Foto Profil"> <!-- Ganti URL dengan foto profil yang diinginkan -->
+    </div>
+    <nav>
+      <a href="index.html">Profil</a>
+      <a href="about.html">Tentang Saya</a>
+      <a href="blog.html">Bloger</a>
+	  <a href="toko.html">Toko</a>
+	  <a href="foto.html">Foto</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="contact.html">Kontak</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <form>
+      <input type="text" placeholder="Nama Anda" required>
+      <input type="email" placeholder="Email Anda" required>
+      <textarea placeholder="Pesan Anda" rows="5" required></textarea>
+      <button type="submit">Kirim</button>
+    </form>
+  </div>
+
+  <footer>© 2025 Nias, Indonesia</footer>
+</body>
+</html>
